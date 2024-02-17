@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-Img {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 120px;
+    height: 48px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor-elementos {
+    display: flex;
+    flex-direction: column;
+    width: 680px;
+    margin-top: 40px;
+    margin-left: 240px;
+
+}
+
+.cajaPrincipal {
+    margin-top: 0;
+    width: 100%;
+    height: 48px;
+    font-size: 32px;
+    border: none;
+}
+
+.lbl {
+    margin-top: 335px;
+    width: 229px;
+    height: 18px;
+    font-size: 14px;
+}
+
+.botones {
+    margin-top: 17px;
+    width: 100%;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn1, .btn2 {
+    width: 330px;
+    border-radius: 16px;
+    height: 67px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+}
+
+.btn1 {
+    background: blue;
+    color: white;
+}
+
+.btn2 {
+    background: #cccccc;
+    color: blue;
+    border: 1px solid blue;
+}
+
+.contenedor-res {
+    position: absolute;
+    top: 10px;
+    left: 930px;
+    margin-left: 20px;
+    border: 1px solid;
+    width: 330px;
+    height: 617px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inpt-res {
+    position: relative;
+    top: 0;
+    width: 320px;
+    height: 920px;
+    border: none;
+    text-align: justify;
+    z-index: 1;
+}
+
+.img-res {
+    position: absolute;
+    top: 150px;
+    width: 224px;
+    z-index: 2;
+}
+
+.div-res{
+    position: absolute;
+    top: 350px;
+    width: 310px;
+    height: 122px;
+    text-align: center;
+    z-index: 2;
+}
+
+.p-one{
+    font-size: 24px;
+    font-weight: 700;
+    width: 310px;
+    height: 58px;
+}
+
+.p-two{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    width: 310px;
+    height: 48px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(to right,#1354A5, #041832);   
+}
+
+footer::before{
+    background-image: url("imagenes/code.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    opacity: 0.4;
+}
+
+.Copyright {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    display: inline;
+}
+
+
+/*Responsive design*/
+
+@media screen {
+    
+}

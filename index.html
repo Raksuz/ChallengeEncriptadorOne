@@ -1,23 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <title>Encriptador ONE</title>
 </head>
+
 <body>
-    <main>
-        <div>
-            <input type="text" placeholder="Introduce un texto" required>
-            <button class="Encript">Encriptar</button>
-            <button class="Dencript">Desencriptar</button>
+    <header>
+        <div class="contenedor-Img">
+            <img src="imagenes/Logo.png" class="logoAlura" alt="Logo de Alura">
         </div>
-        <div>
-            <textarea name="Textocifrado" id="" cols="30" rows="10"></textarea>
+    </header>
+    <main>
+        <div class="container">
+            <div class="contenedor-elementos">
+                <input class="cajaPrincipal" type="text" placeholder="Ingresar texto" required id="entrada">
+                <label for="input" class="lbl">Solo letras minusculas y sin acentos</label>
+                <div class="botones">
+                    <button class="btn1" onclick="encript()">Encriptar</button>
+                    <button class="btn2" onclick="decript()">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-res">
+            <input class="inpt-res" type="text"  id="salida" readonly>
+            <img src="imagenes/Muñeco.png" alt="persona buscando si hay algo" class="img-res">
+            <div class="div-res">
+                <p class="p-one">Ningún mensaje fue encontrado</p>
+                <p class="p-two">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
         </div>
     </main>
     <footer>
-        <p>Carlos Jesus Lopez Chacon - Mexico 2024</p>
+        <p class="Copyright">Carlos Jesus Lopez Chacon - Mexico 2024</p>
     </footer>
 </body>
+
 </html>
