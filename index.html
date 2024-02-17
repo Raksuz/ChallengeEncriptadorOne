@@ -19,15 +19,15 @@
         <div class="container">
             <div class="contenedor-elementos">
                 <input class="cajaPrincipal" type="text" placeholder="Ingresar texto" required id="entrada">
-                <label for="input" class="lbl">Solo letras minusculas y sin acentos</label>
+                <label for="entrada" class="lbl">Solo letras minusculas y sin acentos</label>
                 <div class="botones">
-                    <button class="btn1" onclick="encript()">Encriptar</button>
-                    <button class="btn2" onclick="decript()">Desencriptar</button>
+                    <button class="btn1" onclick="mostrarText()">Encriptar</button>
+                    <button class="btn2" onclick="revertir()">Desencriptar</button>
                 </div>
             </div>
         </div>
         <div class="contenedor-res">
-            <input class="inpt-res" type="text"  id="salida" readonly>
+            <input class="inpt-res" type="text" id="salida" readonly>
             <img src="imagenes/Muñeco.png" alt="persona buscando si hay algo" class="img-res">
             <div class="div-res">
                 <p class="p-one">Ningún mensaje fue encontrado</p>
@@ -38,6 +38,7 @@
     <footer>
         <p class="Copyright">Carlos Jesus Lopez Chacon - Mexico 2024</p>
     </footer>
+    <script src="app.js"></script>
 </body>
 
 </html>
