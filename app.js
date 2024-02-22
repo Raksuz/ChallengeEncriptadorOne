@@ -13,15 +13,18 @@ const reemplazos = {
 function mostrarText() {
     obtenerInput();
     encriptar(textoInicial);
-    limpiarCaja();
+    limpiarCaja2();
     document.getElementById('salida').value = textoEncriptado;
+    limpiarCaja1();
+    verificarText();
 }
 
 function revertir(){
     obtenerInput();
-    limpiarCaja();
     desencriptar(textoInicial);
     document.getElementById('salida').value = textoDecript;
+    limpiarCaja1();
+    verificarText();
 }
 
 function obtenerInput(){
@@ -37,7 +40,7 @@ function encriptar(textoInicial) {
             textoEncriptado += indice;
         }
     }
-    limpiarCaja();
+    limpiarCaja2();
     return textoEncriptado;
 }
 
@@ -48,16 +51,16 @@ function desencriptar(textoInicial){
             i += 1;
         } else if(textoInicial.slice(i, i + 5) === "enter"){
             textoDecript += "e";
-            i += 4
+            i += 4;
         } else if(textoInicial.slice(i, i + 4) === "imes"){
             textoDecript += "i";
-            i += 3
+            i += 3;
         } else if(textoInicial.slice(i, i + 4) === "ober"){
             textoDecript += "o";
-            i += 3
-        } else if(textoInicial.slice(i, i + 4) === "ufas"){
+            i += 3;
+        } else if(textoInicial.slice(i, i + 4) === "ufat"){
             textoDecript += "u";
-            i += 3
+            i += 3;
         } else {
             textoDecript += textoInicial[i];
         }
@@ -65,6 +68,34 @@ function desencriptar(textoInicial){
     return textoDecript;
 }
 
-function limpiarCaja(){
+function verificarText(){
+    let valor = document.getElementById('salida').value;
+    if(valor !== ""){
+        document.getElementById('p').innerHTML = "";
+        document.getElementById('psub').innerHTML = "";
+        document.getElementById('dimg').style.display = "none";
+    } else{
+        document.getElementById('p').innerHTML = "Ningún mensaje fue encontrado";
+        document.getElementById('psub').innerHTML = "Ingresa el texto que desees encriptar o desencriptar";
+        document.getElementById('dimg').style.display = "block";
+    }
+}
+
+function copiText(){
+    const textCopiado = document.getElementById('salida');
+    textCopiado.select();
+
+    navigator.clipboard.writeText(textCopiado.value).then(() => {
+
+    }).catch(err => {
+
+    });
+}
+
+function limpiarCaja2(){
     document.getElementById('salida').value = '';
+}
+
+function limpiarCaja1(){
+    document.getElementById('entrada').value = '';
 }

@@ -16,22 +16,23 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class="contenedor-elementos">
-                <input class="cajaPrincipal" type="text" placeholder="Ingresar texto" required id="entrada">
-                <label for="entrada" class="lbl">Solo letras minusculas y sin acentos</label>
-                <div class="botones">
-                    <button class="btn1" onclick="mostrarText()">Encriptar</button>
-                    <button class="btn2" onclick="revertir()">Desencriptar</button>
-                </div>
+        <div class="contenedor-elementos">
+            <textarea class="cajaPrincipal" type="text" placeholder="Ingresar texto" required id="entrada"></textarea>
+            <label for="entrada" class="lbl">&#33; Solo letras minusculas y sin acentos</label>
+            <div class="botones">
+                <button class="btn1" onclick="mostrarText()">Encriptar</button>
+                <button class="btn2" onclick="revertir()">Desencriptar</button>
             </div>
         </div>
         <div class="contenedor-res">
-            <input class="inpt-res" type="text" id="salida" readonly>
-            <img src="imagenes/Muñeco.png" alt="persona buscando si hay algo" class="img-res">
+            <textarea class="inpt-res" type="text" id="salida" oninput="verificarText()" readonly></textarea>
+            <img src="imagenes/Muñeco.png" alt="Persona buscando algo" class="img-res" id="dimg">
             <div class="div-res">
-                <p class="p-one">Ningún mensaje fue encontrado</p>
-                <p class="p-two">Ingresa el texto que desees encriptar o desencriptar</p>
+                <p class="p-one" id="p">Ningún mensaje fue encontrado</p>
+                <p class="p-two" id="psub">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div class="containerBtnCopiar">
+                <button onclick="copiText()" class="btnCopiar">Copiar</button>
             </div>
         </div>
     </main>
